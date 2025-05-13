@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
 :root{
     --heading-color: #37373f;
     --nav-color: #7f7f90;
     --theme-white:#fff;
     --accent-color: #ce1212;
+    --background-color: #f2f2f2;
 
     --theme-font-roboto: "Roboto", sans-serif;
     --theme-font-inter:  "Inter", sans-serif;
+    --theme-font-Amatic: "Amatic SC", sans-serif;
 
 }
 
@@ -43,6 +47,21 @@ html,body{
     align-items: center;
 }
 
+.flex-column{
+    flex-direction: column;
+}
+.justify-content-center{
+    justify-content: center;
+}
+
+.col-6{
+    width: 50%;
+    padding: 0 12px;
+}
+.h-100{
+    height: 100%;
+}
+
 /* common tag css start */
 ul li{
     list-style: none;
@@ -51,6 +70,11 @@ a{
     display: inline-block;
     text-decoration: none;
     color: inherit;
+}
+
+img{
+    width: 100%;
+    display: block;
 }
 
 /* common tag css end */
@@ -84,7 +108,7 @@ header nav ul li a{
     margin: 0 15px;
 }
 
-header nav+div a{
+header nav+div a,.hero .hero-content .btn-group a:first-child{
     color: var(--theme-white);
     font-size: 14px;
     padding: 8px 26px;
@@ -92,5 +116,48 @@ header nav+div a{
     background-color: var(--accent-color);
     
 }
+header .navbar{
+    position: relative;
+}
+
+.fa-bars{
+    display: none;
+    color: black;
+    padding: 10px;
+    color: var(--nav-color);
+    font-size: 21px;
+}
 
 /* header section end  */
+
+.hero{
+    background-color: var(--background-color);
+    padding: 60px 0;
+}
+
+.hero .hero-content h2{
+    font-size: 64px;
+    font-family: var(--theme-font-Amatic);
+}
+
+.hero .hero-content p{
+    font-size: 21px;
+    font-family: var(--theme-font-roboto);
+    color: var(--nav-color);
+    margin: 2rem 0;
+}
+.hero .hero-content .btn-group a:first-child{
+    font-size: 15px;
+    padding: 10px 28px;
+    margin-right: 1.5rem;
+}
+
+.hero .hero-content .btn-group a:last-child{
+    font-weight: 600;
+}
+
+.hero .hero-content .btn-group a:last-child i{
+    font-size: 2rem;
+    margin-right: .5rem;
+    color: var(--accent-color);
+}
